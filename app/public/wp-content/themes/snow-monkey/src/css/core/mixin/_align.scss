@@ -1,0 +1,19 @@
+@mixin alignfull() {
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  width: auto;
+  max-width: none;
+
+  > .#{$_prefix}c-container {
+    @include container-padding();
+  }
+}
+
+@mixin alignwide() {
+  @include _container();
+  @include alignfull();
+  position: relative;
+  right: -50vw;
+  transform: translateX(-50%);
+  max-width: $_container-max-width;
+}

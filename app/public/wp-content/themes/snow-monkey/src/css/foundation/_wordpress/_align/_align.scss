@@ -1,0 +1,48 @@
+.alignleft {
+  // Margin is set in each block
+  float: left;
+}
+
+.alignright {
+  // Margin is set in each block
+  float: right;
+}
+
+.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+
+.alignfull {
+  @include _media-max(md) {
+    @include alignfull();
+  }
+
+  [data-has-sidebar="false"] & {
+    @include alignfull();
+  }
+}
+
+.alignwide {
+  @include _media-max(md) {
+    @include alignfull();
+  }
+
+  [data-is-slim-width="true"][data-has-sidebar="false"] & {
+    @include _media-min(lg) {
+      @include alignwide();
+    }
+  }
+
+  [data-is-slim-width="false"][data-has-sidebar="false"] & {
+    @include _media-only(lg) {
+      @include alignfull();
+    }
+
+    @include _media-min(xl) {
+      @include alignwide();
+    }
+  }
+}

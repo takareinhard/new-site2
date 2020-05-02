@@ -1,0 +1,58 @@
+input, textarea, keygen, select, button {
+  font-size: 100%;
+}
+
+a {
+  color: $color-accent;
+}
+
+h1 {
+  @include _font-size-line-height($_base-font-size * $_h1-font-size-scale / 1.5);
+
+  @include _media-min(md) {
+    @include _font-size-line-height($_base-font-size * $_h1-font-size-scale / 1.25);
+  }
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h1-font-size-scale);
+  }
+}
+
+h2 {
+  @include _font-size-line-height($_base-font-size * $_h2-font-size-scale / 1.25);
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h2-font-size-scale);
+  }
+}
+
+h3 {
+  @include _font-size-line-height($_base-font-size * $_h3-font-size-scale / 1.25);
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h3-font-size-scale);
+  }
+}
+
+h4 {
+  @include _font-size-line-height($_base-font-size * $_h4-font-size-scale / 1.25);
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h4-font-size-scale);
+  }
+}
+
+iframe {
+  max-width: 100%;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+textarea {
+  @include _font-size($_base-font-size-px);
+}

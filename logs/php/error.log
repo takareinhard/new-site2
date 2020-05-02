@@ -1,0 +1,9 @@
+[24-Feb-2020 14:18:36 UTC] PHP Fatal error:  Uncaught Error: Maximum function nesting level of '256' reached, aborting! in /Users/hirotatakara/Local Sites/new-site2/app/public/wp-includes/cache.php:727
+Stack trace:
+#0 /Users/hirotatakara/Local Sites/new-site2/app/public/wp-includes/cache.php(727): array_key_exists('notoptions', Array)
+#1 /Users/hirotatakara/Local Sites/new-site2/app/public/wp-includes/cache.php(544): WP_Object_Cache->_exists('notoptions', 'options')
+#2 /Users/hirotatakara/Local Sites/new-site2/app/public/wp-includes/cache.php(123): WP_Object_Cache->get('notoptions', 'options', false, NULL)
+#3 /Users/hirotatakara/Local Sites/new-site2/app/public/wp-includes/option.php(73): wp_cache_get('notoptions', 'options')
+#4 /Users/hirotatakara/Local Sites/new-site2/app/public/wp-content/plugins/shareaholic/utilities.php(58): get_option('shareaholic_set...', Array)
+#5 /Users/hirotatakara/Local Sites/new-site2/app/public/wp-content/plugins/shareaholic/utilities.php(223): ShareaholicUtilities::get_settings()
+#6 /Users/hirotatakara/Local Sites/new-site in /Users/hirotatakara/Local Sites/new-site2/app/public/wp-includes/cache.php on line 727

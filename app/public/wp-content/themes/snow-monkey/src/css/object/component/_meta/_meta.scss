@@ -1,0 +1,22 @@
+.#{$_prefix}c-meta {
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: .75em;
+    }
+
+    &--author {
+      img {
+        @include _circle(24px);
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.#{$_prefix}c-entries--text {
+  .#{$_prefix}c-meta__item:not(.#{$_prefix}c-meta__item--published) {
+    display: none;
+  }
+}
